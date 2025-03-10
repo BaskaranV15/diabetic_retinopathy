@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Prediction Result</h2>
+<!-- <img src="{{ url_for('static', filename='styles/' + result.image) }}" alt="Uploaded Image" style="max-width: 400px;"> -->
+<img src="{{ img_path }}" alt="Uploaded Image" style="width:300px;height:auto;"> 
+<p><strong>Disease:</strong> {{ result.name }}</p>
+<p><strong>Description:</strong> {{ result.description }}</p>
+<p><strong>Confidence:</strong> {{ result.confidence }}</p>
+{% if result.symptoms %}
+<p><strong>Symptoms:</strong></p>
+<ul>
+    <li>Early: {{ result.symptoms.early }}</li>
+    <li>Later: {{ result.symptoms.later }}</li>
+</ul>
+{% endif %}
+{% endblock %}

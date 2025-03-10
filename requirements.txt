@@ -1,0 +1,4 @@
+Flask==2.2.3
+Flask-Session==0.4.0
+tensorflow==2.12.0
+numpy==1.24.3
